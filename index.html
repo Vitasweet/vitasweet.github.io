@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VitaSweets — Зефірні квіти</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="language-switcher">
+    <button onclick="setLanguage('ua')">UA</button>
+    <button onclick="setLanguage('en')">EN</button>
+  </div>
+
+  <section class="intro-text">
+    <h1 data-ua="Авторські букети з натурального зефіру"
+        data-en="Handcrafted Marshmallow Bouquets from Nature"></h1>
+    <p data-ua="Зроблені з пюре ягід і фруктів. Ніжний смак, повітряна текстура, користь та низька калорійність. Кожна композиція — це емоція. З таким подарунком ви завжди будете виділятись!"
+       data-en="Made from berry and fruit purée. Delicate taste, airy texture, healthy and low-calorie. Each bouquet is an emotion. With such a gift, you’ll always stand out!"></p>
+  </section>
+
+  <section class="order" id="order">
+    <h2 data-ua="Зробити замовлення" data-en="Place an Order"></h2>
+    <form onsubmit="sendMessage(); return false;">
+      <input type="text" id="name" placeholder="Name / Ім'я" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <textarea id="message" placeholder="Що хочете замовити? / What would you like to order?" required></textarea>
+      <div class="messenger-buttons">
+        <a id="whatsapp-link" class="whatsapp-btn" target="_blank">Замовити в WhatsApp</a>
+        <a id="instagram-link" class="instagram-btn" target="_blank">Замовити в Instagram</a>
+      </div>
+    </form>
+  </section>
+
+  <section class="gallery">
+    <h2 data-ua="Мої роботи" data-en="My Work"></h2>
+    <div class="images"><img src="mybouquet1.jpg" alt="Bouquet 1" />
+<img src="mybouquet2.jpg" alt="Bouquet 2" />
+<img src="mybouquet3.jpg" alt="Bouquet 3" />
+<img src="mybouquet4.jpg" alt="Bouquet 4" />
+<img src="mybouquet5.jpg" alt="Bouquet 5" />
+<img src="mybouquet6.jpg" alt="Bouquet 6" />
+<img src="mybouquet7.jpg" alt="Bouquet 7" />
+<img src="mybouquet8.jpg" alt="Bouquet 8" />
+<img src="mybouquet9.jpg" alt="Bouquet 9" />
+<img src="mybouquet10.jpg" alt="Bouquet 10" />
+<img src="mybouquet11.jpg" alt="Bouquet 11" />
+<img src="mybouquet12.jpg" alt="Bouquet 12" />
+<img src="mybouquet13.jpg" alt="Bouquet 13" />
+<img src="mybouquet14.jpg" alt="Bouquet 14" />
+<img src="mybouquet15.jpg" alt="Bouquet 15" />
+<img src="mybouquet16.jpg" alt="Bouquet 16" />
+<img src="mybouquet17.jpg" alt="Bouquet 17" />
+<img src="mybouquet18.jpg" alt="Bouquet 18" />
+<img src="mybouquet19.jpg" alt="Bouquet 19" />
+<img src="mybouquet20.jpg" alt="Bouquet 20" />
+<img src="mybouquet21.jpg" alt="Bouquet 21" />
+<img src="mybouquet22.jpg" alt="Bouquet 22" />
+<img src="mybouquet23.jpg" alt="Bouquet 23" />
+<img src="mybouquet24.jpg" alt="Bouquet 24" />
+<img src="mybouquet25.jpg" alt="Bouquet 25" />
+<img src="mybouquet26.jpg" alt="Bouquet 26" />
+<img src="mybouquet27.jpg" alt="Bouquet 27" />
+<img src="mybouquet28.jpg" alt="Bouquet 28" />
+<img src="mybouquet29.jpg" alt="Bouquet 29" />
+<img src="mybouquet30.jpg" alt="Bouquet 30" />
+<img src="mybouquet31.jpg" alt="Bouquet 31" />
+<img src="mybouquet32.jpg" alt="Bouquet 32" />
+<img src="mybouquet33.jpg" alt="Bouquet 33" />
+      <img src="mybouquet34.jpg" alt="Bouquet 34" />
+    </div>
+  </section>
+
+  <footer>
+    <p data-ua="© 2025 VitaSweets. Зроблено з любов’ю."
+       data-en="© 2025 VitaSweets. Made with love."></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
