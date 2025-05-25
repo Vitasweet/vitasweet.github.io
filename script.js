@@ -1,1 +1,1 @@
-// JS code буде вставлений тут
+// Final JS for WhatsApp and Instagram buttons
