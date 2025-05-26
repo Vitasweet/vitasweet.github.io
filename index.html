@@ -22,22 +22,26 @@
     <div class="phone">+1 (437) 244-1529</div>
   </header>
 
-  <section class="intro">
-    <h1 data-ua="Авторські букети з натурального зефіру"
-        data-en="Handcrafted Bouquets from Natural Marshmallow"></h1>
-    <p data-ua="Зефір — це не просто солодощі. Це стародавній десерт, що бере початок із натурального фруктового пюре. Я роблю його з ягід та фруктів вручну, квітка за квіткою, створюючи унікальні букети, які не повторюються. Повітряна текстура, користь, витонченість і натуральний склад роблять ці десерти не тільки красивими, а й корисними. Кожен букет — це емоція, подарунок із душею."
-       data-en="Marshmallow is more than a sweet treat. It's an ancient dessert rooted in natural fruit purée. I craft it by hand from berries and fruits — flower by flower — creating unique bouquets that never repeat. Airy texture, beauty, and benefits in one. Each bouquet is a moment of joy, a meaningful and delicious gift.">
+  <main class="intro">
+    <h1 data-ua="Авторські букети з натурального зефіру" data-en="Handmade Bouquets from Natural Marshmallow"></h1>
+    <p data-ua="Зефір — це не просто солодощі. Це десерт, створений із натурального ягідного та фруктового пюре. Повітряна текстура, естетика, користь і унікальність в кожному букеті. Кожна квітка — зроблена вручну. Це витвір їстівного мистецтва."
+       data-en="Marshmallow is not just a sweet. It’s a dessert made from real fruit and berry purée. Airy texture, natural benefits, elegance and uniqueness in every bouquet. Each flower is handmade — an edible work of art.">
     </p>
-  </section>
+  </main>
 
   <section class="order" id="order">
-    <h2 data-ua="Замовлення" data-en="Order Now"></h2>
-    <div class="messenger-buttons">
-      <a class="whatsapp-btn" href="https://wa.me/14372441529" target="_blank"
-         data-ua="Написати в WhatsApp" data-en="Message on WhatsApp">Написати в WhatsApp</a>
-      <a class="instagram-btn" href="https://instagram.com/vitas_weet" target="_blank"
-         data-ua="Instagram" data-en="Instagram">Instagram</a>
-    </div>
+    <h2 data-ua="Зробити замовлення" data-en="Place an Order"></h2>
+    <form onsubmit="sendMessage(); return false;">
+      <input type="text" id="name" placeholder="Name / Ім'я" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <textarea id="message" placeholder="Що хочете замовити? / What would you like to order?" required></textarea>
+      <div class="messenger-buttons">
+        <a id="whatsapp-link" class="whatsapp-btn" target="_blank"
+           data-ua="Замовити в WhatsApp" data-en="Order via WhatsApp">Замовити в WhatsApp</a>
+        <a id="instagram-link" class="instagram-btn" target="_blank"
+           data-ua="Написати в Instagram" data-en="Message via Instagram">Написати в Instagram</a>
+      </div>
+    </form>
   </section>
 
   <section class="gallery">
