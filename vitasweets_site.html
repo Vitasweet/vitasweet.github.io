@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaSweets</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="language-switcher">
+                <button onclick="setLanguage('uk')">UA</button> | 
+                <button onclick="setLanguage('en')">EN</button>
+            </div>
+            <div class="logo">VitaSweets</div>
+            <div class="icons">
+                <a href="https://wa.me/14372441529" target="_blank"><img src="whatsapp.png" alt="WhatsApp"></a>
+                <a href="https://www.instagram.com/vitas_weet/" target="_blank"><img src="instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <nav>
+            <a href="#home">Головна</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#about">Про нас</a>
+            <a href="#order">Замовити</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1 data-uk="Більше, ніж квіти" data-en="More Than Flowers">Більше, ніж квіти</h1>
+            <p data-uk="Наші зефірні квіти створені з натурального ягідного та фруктового пюре. Це не лише смачно, а й корисно." 
+               data-en="Our marshmallow flowers are made from natural berry and fruit puree. Not only delicious but also healthy.">
+                Наші зефірні квіти створені з натурального ягідного та фруктового пюре. Це не лише смачно, а й корисно.
+            </p>
+            <p data-uk="Капкейки: ваніль, шоколад, червоний бархат — ніжні, вишукані, прикрашені квітами ручної роботи." 
+               data-en="Cupcakes: vanilla, chocolate, red velvet — tender, elegant, decorated with handmade flowers.">
+                Капкейки: ваніль, шоколад, червоний бархат — ніжні, вишукані, прикрашені квітами ручної роботи.
+            </p>
+        </section>
+
+        <section id="gallery">
+            <h2 data-uk="Галерея" data-en="Gallery">Галерея</h2>
+            <div class="product-gallery">
+                <!-- Фото будуть вставлені вручну -->
+                <div class="product-item">
+                    <img src="mybouquet1.jpg" alt="Букет">
+                    <input type="text" placeholder="Бажані відтінки / Preferred colors">
+                    <button onclick="addToCart('mybouquet1.jpg')">Додати до кошика</button>
+                </div>
+                <!-- Інші фото аналогічно -->
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 data-uk="Про нас" data-en="About Us">Про нас</h2>
+            <p data-uk="Уся продукція виготовлена вручну. Наш зефір — це різновид пастили: натуральний, низькокалорійний, ідеальний для дітей і спортсменів." 
+               data-en="All products are handmade. Our marshmallow is a variation of pastila: natural, low-calorie, perfect for children and athletes.">
+                Уся продукція виготовлена вручну. Наш зефір — це різновид пастили: натуральний, низькокалорійний, ідеальний для дітей і спортсменів.
+            </p>
+        </section>
+
+        <section id="order">
+            <h2 data-uk="Оформлення замовлення" data-en="Place Order">Оформлення замовлення</h2>
+            <div id="cart"></div>
+            <button onclick="sendOrder()">Відправити замовлення</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 VitaSweets</p>
+    </footer>
+</body>
+</html>
