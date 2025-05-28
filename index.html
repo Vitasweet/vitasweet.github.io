@@ -1,93 +1,277 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VitaSweets — Зефірні букети</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>VitaSweets</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="language-switcher">
-    <button onclick="setLanguage('ua')">UA</button>
-    <button onclick="setLanguage('en')">EN</button>
+    <div class="background"></div>
+    <header>
+        <img src="logo_resized.png" alt="VitaSweets Logo" class="logo" />
+        <div class="lang-switch">
+            <button onclick="setLanguage('ua')">UA</button>
+            <button onclick="setLanguage('en')">EN</button>
+        </div>
+        <div class="cart-icon" onclick="window.open('cart.html', '_blank')">🛒</div>
+    </header>
+    <main>
+        
+<section class="hero">
+    <button onclick="scrollToGallery()" style="display:block; margin:20px auto; padding:10px 20px; background-color:#2f5d3c; color:white; border:none; border-radius:6px; cursor:pointer;">
+        Перейти до галереї
+    </button>
+
+            <h1 data-lang-ua="Більше, ніж квіти" data-lang-en="More than flowers"></h1>
+            <h2 data-lang-ua="Їстівна краса, створена з турботою" data-lang-en="Edible beauty made with care"></h2>
+        </section>
+        <section class="about">
+            <p data-lang-ua="У VitaSweets ми створюємо не просто десерти — ми втілюємо ваші мрії у форму їстівних квітів. Кожна композиція — це ручна робота, унікальна як відбиток пальця. Наші квіти зроблені з натурального ягідно-фруктового пюре, без консервантів, з використанням веганського агар-агару — природного загущувача рослинного походження, багатого на мінерали. Окрім квітів, ми готуємо капкейки — улюблені смаки (ваніль, шоколад, червоний бархат) у поєднанні з нашими фірмовими квітами створюють справжню гастрономічну насолоду."
+               data-lang-en="At VitaSweets, we don’t just make desserts — we turn your dreams into edible flower compositions. Each piece is handmade, unique like a fingerprint. Our flowers are crafted from natural berry-fruit purée, preservative-free, using vegan agar-agar — a plant-based thickener rich in minerals. In addition to flowers, we make cupcakes — favorite flavors (vanilla, chocolate, red velvet) combined with our signature flowers create true gastronomic delight."></p>
+        </section>
+        <h2 class="gallery-title" data-lang-ua="Галерея" data-lang-en="Gallery">Галерея</h2>
+<section class="gallery" id="gallery">
+    <div class="gallery-item">
+        <img src="gallery/mybouquet1.jpg" alt="mybouquet1.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet2.jpg" alt="mybouquet2.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet3.jpg" alt="mybouquet3.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet4.jpg" alt="mybouquet4.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet5.jpg" alt="mybouquet5.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet6.jpg" alt="mybouquet6.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet7.jpg" alt="mybouquet7.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet8.jpg" alt="mybouquet8.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet9.jpg" alt="mybouquet9.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet10.jpg" alt="mybouquet10.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet11.jpg" alt="mybouquet11.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet12.jpg" alt="mybouquet12.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet13.jpg" alt="mybouquet13.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet14.jpg" alt="mybouquet14.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet15.jpg" alt="mybouquet15.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet16.jpg" alt="mybouquet16.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet17.jpg" alt="mybouquet17.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet18.jpg" alt="mybouquet18.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet19.jpg" alt="mybouquet19.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet20.jpg" alt="mybouquet20.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet21.jpg" alt="mybouquet21.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet22.jpg" alt="mybouquet22.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet23.jpg" alt="mybouquet23.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet24.jpg" alt="mybouquet24.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet25.jpg" alt="mybouquet25.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet26.jpg" alt="mybouquet26.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet27.jpg" alt="mybouquet27.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet28.jpg" alt="mybouquet28.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet29.jpg" alt="mybouquet29.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet30.jpg" alt="mybouquet30.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet31.jpg" alt="mybouquet31.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet32.jpg" alt="mybouquet32.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet33.jpg" alt="mybouquet33.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    
+    <div class="gallery-item">
+        <img src="gallery/mybouquet34.jpg" alt="mybouquet34.jpg" />
+        <button data-lang-ua="Додати в кошик" data-lang-en="Add to cart">Додати в кошик</button>
+        <input type="text" placeholder="Бажані відтінки / Preferred shades" />
+    </div>
+    </section>
+        <section class="order">
+            <h3 data-lang-ua="Кошик" data-lang-en="Cart"></h3>
+            <div id="cart-items"></div>
+            <button onclick="sendOrder('whatsapp')">WhatsApp</button>
+            <button onclick="sendOrder('messenger')">Messenger</button>
+        </section>
+        <footer>
+            <p data-lang-ua="Зроби один день свого життя і життя своїх близьких особливим"
+               data-lang-en="Make one day of your life and your loved ones special"></p>
+            <div class="contacts">
+                <a href="https://wa.me/14372441529" target="_blank">WhatsApp</a>
+                <a href="https://www.instagram.com/vitas_weet" target="_blank">Instagram</a>
+            </div>
+        </footer>
+    </main>
+
+<!-- Cart Modal -->
+<div id="cartModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="toggleModal('cartModal')">&times;</span>
+    <h2>Ваше замовлення</h2>
+    <div id="modal-cart-items"></div>
+    <button onclick="sendOrder('whatsapp')">✅ Підтвердити через WhatsApp</button>
+    <button onclick="sendOrder('messenger')">✅ Підтвердити через Messenger</button>
   </div>
+</div>
 
-  <header class="site-header">
-    <img src="logo.png" alt="VitaSweets Logo" class="logo">
-    <div class="slogans">
-      <span data-ua="Більше, ніж квіти" data-en="More than flowers"></span> |
-      <span data-ua="Їстівна краса" data-en="Edible beauty"></span> |
-      <span data-ua="Їстівний арт" data-en="Edible art"></span>
-    </div>
-    <div class="phone">+1 (437) 244-1529</div>
-  </header>
+<!-- Image Modal -->
+<div id="imageModal" class="modal">
+  <div class="modal-content image-view">
+    <span class="close" onclick="toggleModal('imageModal')">&times;</span>
+    <img id="modalImage" src="" alt="Перегляд зображення" />
+  </div>
+</div>
 
-  <main class="intro">
-    <h1 data-ua="Авторські букети з натурального зефіру" data-en="Handmade Bouquets from Natural Marshmallow"></h1>
-    <p data-ua="Зефір — це не просто солодощі. Це десерт, створений із натурального ягідного та фруктового пюре. Повітряна текстура, естетика, користь і унікальність в кожному букеті. Кожна квітка — зроблена вручну. Це витвір їстівного мистецтва."
-       data-en="Marshmallow is not just a sweet. It’s a dessert made from real fruit and berry purée. Airy texture, natural benefits, elegance and uniqueness in every bouquet. Each flower is handmade — an edible work of art.">
-    </p>
-  </main>
-
-  <section class="order" id="order">
-    <h2 data-ua="Зробити замовлення" data-en="Place an Order"></h2>
-    <form onsubmit="sendMessage(); return false;">
-      <input type="text" id="name" placeholder="Name / Ім'я" required />
-      <input type="email" id="email" placeholder="Email" required />
-      <textarea id="message" placeholder="Що хочете замовити? / What would you like to order?" required></textarea>
-      <div class="messenger-buttons">
-        <a id="whatsapp-link" class="whatsapp-btn" target="_blank"
-           data-ua="Замовити в WhatsApp" data-en="Order via WhatsApp">Замовити в WhatsApp</a>
-        <a id="instagram-link" class="instagram-btn" target="_blank"
-           data-ua="Написати в Instagram" data-en="Message via Instagram">Написати в Instagram</a>
-      </div>
-    </form>
-  </section>
-
-  <section class="gallery">
-    <h2 data-ua="Мої роботи" data-en="My Work"></h2>
-    <div class="images">
-<img src="mybouquet1.jpg" alt="Bouquet 1" />
-<img src="mybouquet2.jpg" alt="Bouquet 2" />
-<img src="mybouquet3.jpg" alt="Bouquet 3" />
-<img src="mybouquet4.jpg" alt="Bouquet 4" />
-<img src="mybouquet5.jpg" alt="Bouquet 5" />
-<img src="mybouquet6.jpg" alt="Bouquet 6" />
-<img src="mybouquet7.jpg" alt="Bouquet 7" />
-<img src="mybouquet8.jpg" alt="Bouquet 8" />
-<img src="mybouquet9.jpg" alt="Bouquet 9" />
-<img src="mybouquet10.jpg" alt="Bouquet 10" />
-<img src="mybouquet11.jpg" alt="Bouquet 11" />
-<img src="mybouquet12.jpg" alt="Bouquet 12" />
-<img src="mybouquet13.jpg" alt="Bouquet 13" />
-<img src="mybouquet14.jpg" alt="Bouquet 14" />
-<img src="mybouquet15.jpg" alt="Bouquet 15" />
-<img src="mybouquet16.jpg" alt="Bouquet 16" />
-<img src="mybouquet17.jpg" alt="Bouquet 17" />
-<img src="mybouquet18.jpg" alt="Bouquet 18" />
-<img src="mybouquet19.jpg" alt="Bouquet 19" />
-<img src="mybouquet20.jpg" alt="Bouquet 20" />
-<img src="mybouquet21.jpg" alt="Bouquet 21" />
-<img src="mybouquet22.jpg" alt="Bouquet 22" />
-<img src="mybouquet23.jpg" alt="Bouquet 23" />
-<img src="mybouquet24.jpg" alt="Bouquet 24" />
-<img src="mybouquet25.jpg" alt="Bouquet 25" />
-<img src="mybouquet26.jpg" alt="Bouquet 26" />
-<img src="mybouquet27.jpg" alt="Bouquet 27" />
-<img src="mybouquet28.jpg" alt="Bouquet 28" />
-<img src="mybouquet29.jpg" alt="Bouquet 29" />
-<img src="mybouquet30.jpg" alt="Bouquet 30" />
-<img src="mybouquet31.jpg" alt="Bouquet 31" />
-<img src="mybouquet32.jpg" alt="Bouquet 32" />
-<img src="mybouquet33.jpg" alt="Bouquet 33" />
-<img src="mybouquet34.jpg" alt="Bouquet 34" />
-    </div>
-  </section>
-
-  <footer>
-    <p data-ua="© 2025 VitaSweets. Зроблено з любов’ю." data-en="© 2025 VitaSweets. Made with love."></p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

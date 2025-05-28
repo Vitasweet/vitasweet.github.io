@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <title>Кошик</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            padding: 20px;
+            background-color: #f6f6f6;
+            text-align: center;
+        }
+        h1 {
+            color: #2f5d3c;
+        }
+        .cart-item {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 10px;
+            margin: 10px auto;
+            max-width: 500px;
+            background: white;
+        }
+        .cart-item img {
+            width: 100px;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        .buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 24px;
+            background-color: #2f5d3c;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ваш кошик</h1>
+    <div id="cart-content"></div>
+    <div class="buttons">
+        <a href="#" onclick="sendOrder('whatsapp')">Підтвердити через WhatsApp</a>
+        <a href="#" onclick="sendOrder('messenger')">Підтвердити через Messenger</a>
+    </div>
+    <script>
+        const cart = JSON.parse(localStorage.getItem('vitasweets_cart') || '[]');
+        const container = document.getElementById('cart-content');
+        if (cart.length === 0) {
+            container.innerHTML = "<p>Кошик порожній.</p>";
+        } else {
+            cart.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'cart-item';
+                div.innerHTML = `
+                    <img src="${item.img}" alt="Фото">
+                    <label>Відтінки: <input type="text" value="${item.shades}" onchange="updateShades(${index}, this.value)"></label>
+                    <label>Кількість: <input type="number" min="1" value="${item.qty}" onchange="updateQty(${index}, this.value)"></label>
+                    <button onclick="removeItem(${index})">❌ Видалити</button>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('vitasweets_cart', JSON.stringify(cart));
+            location.reload();
+        }
+
+        function sendOrder(method) {
+            if (cart.length === 0) return;
+            let message = "✅ Замовлення VitaSweets:%0A";
+            cart.forEach((item, i) => {
+                message += `${i+1}. ${item.img} — Відтінки: ${item.shades} — Кількість: ${item.qty}%0A`;
+            });
+            if (method === 'whatsapp') {
+                window.open('https://wa.me/14372441529?text=' + message, '_blank');
+            } else {
+                window.open('https://www.facebook.com/share/19esF7jcEz/?mibextid=wwXIfr', '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
+
+    <script>
+    function updateQty(index, value) {
+        cart[index].qty = parseInt(value);
+        localStorage.setItem('vitasweets_cart', JSON.stringify(cart));
+    }
+    function updateShades(index, value) {
+        cart[index].shades = value;
+        localStorage.setItem('vitasweets_cart', JSON.stringify(cart));
+    }
+    </script>
+    

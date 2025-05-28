@@ -1,0 +1,185 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background-color: #dce9d4;
+}
+.background {
+    background-image: url('background.png');
+    background-size: cover;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    opacity: 0.3;
+}
+.logo {
+    width: 100px;
+    display: block;
+    margin: 20px auto;
+}
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+}
+.cart-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #2f5d3c;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.gallery-item {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.gallery-item img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+.gallery-item button {
+    background-color: #2f5d3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.gallery-item input {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Центрування заголовків і текстів */
+.hero h1, .hero h2, .about p, .order h3, footer p {
+    text-align: center;
+}
+.gallery-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+/* Темно-зелена велика кнопка кошика */
+.cart-icon {
+    font-size: 32px;
+    color: #1f3a27;
+}
+
+/* Кнопки WhatsApp і Instagram внизу */
+footer .contacts a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #2f5d3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+}
+footer .contacts {
+    text-align: center;
+}
+
+/* Анімація додавання в кошик */
+@keyframes moveToCart {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: translate(200px, -300px) scale(0.5); opacity: 0; }
+}
+.animated-to-cart {
+    animation: moveToCart 1s forwards;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+.modal-content.image-view {
+    text-align: center;
+    max-width: 90%;
+}
+.modal-content.image-view img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content {
+    animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.logo {
+    width: 160px;
+    filter: brightness(0.7) sepia(1) hue-rotate(30deg) saturate(2.5);
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.about, .hero, .gallery, .order {
+    text-align: center;
+}
+.order input, .order textarea {
+    display: block;
+    margin: 10px auto;
+}
+
+
+
+@keyframes flyToCart {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(300px, -300px) scale(0.1);
+    }
+}
+
+.fly-to-cart {
+    animation: flyToCart 1s ease-in-out forwards;
+    z-index: 1000;
+    position: absolute;
+    pointer-events: none;
+}
